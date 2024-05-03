@@ -53,7 +53,7 @@ export const Inicio = (url) => {
             }}
           >
             {comercio?.attributes?.msjInicio ||
-              "Reintegros Cuenta DNI Y Consultar por nuestros descuentos a Jubilados"}
+              "Consulta por nuestro Menuú del Día"}
           </p>{" "}
         </div>
         <div className="BottomLanding">
