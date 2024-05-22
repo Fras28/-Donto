@@ -16,7 +16,7 @@ const PdfGeneratos = () => {
     const doc = new jsPDF('landscape', 'mm', pageSize, true, quality);
 
     const margin = 10;
-    const lineHeight = 5;
+    const lineHeight = 4;
     const halfLineHeight = lineHeight / 2;
     const columnWidth = (doc.internal.pageSize.width - 3 * margin) / 2;
     let currentPage = 1;
@@ -155,12 +155,12 @@ textLines.forEach((line) => {
             const detalleLines = doc.splitTextToSize(articulo?.attributes?.detail, columnWidth - 40);
             doc.setFontSize(8);
             detalleLines.forEach((line) => {
-              articuloText += `\n\t\t${line}`;
+              articuloText += `\n\n\t\t${line}`;
             });
-            articuloText += "\n\n";
+            articuloText += "\n";
             doc.setFontSize(10);
           } else {
-            articuloText += "\n\n";
+            articuloText += "\n";
           }
 
           const articuloTextLines = doc.splitTextToSize(articuloText, columnWidth);
