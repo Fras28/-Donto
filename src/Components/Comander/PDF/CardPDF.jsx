@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncCancelFav, asyncfavProducts } from "../../redux/slice";
-import "./Card.css";
+import "../../Cards/Card/Card.css";
 
-export const Card = ({ producto }) => {
+export const CardPDF = ({ producto }) => {
+
+
+  console.log("Card - - - PDF",producto);
+
+
+
   let { favProd } = useSelector((state) => state.alldata);
   const dispatch = useDispatch();
   const [articles, setArticles] = useState({

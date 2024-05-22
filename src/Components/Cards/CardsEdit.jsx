@@ -5,6 +5,7 @@ import "./Cards.css";
 import { CardEdite } from "./Card/CardEdit";
 
 export const CardsEdite = ({ products }) => {
+
   return (
     <div className="cartaEdit" >
       <div className="rowsCardEdit">

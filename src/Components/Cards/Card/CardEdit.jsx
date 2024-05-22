@@ -8,13 +8,12 @@ import EditProduct from "../../Comander/formVenta/formEditProd";
 
 export const CardEdite = ({ producto }) => {
   const dispatch = useDispatch();
+  console.log(producto.attributes.name);
   const [articles, setArticles] = useState({
     name: [],
     price: [],
   });
-  const product = producto.attributes;
-
-console.log(product, "en CardEdite");
+  let productx = producto.attributes;
 
   const editLogo = (
     <svg
@@ -45,13 +44,13 @@ console.log(product, "en CardEdite");
   return (
     <div className="contCardEdit">
     <div className="cardContentEdit">
-      <p className="nameProdEdit">{product.name}</p>
-      <p className="priceEdit">${product.price}</p>
+      <p className="nameProdEdit">{productx.name}</p>
+      <p className="priceEdit">${productx.price}</p>
     </div>
     <div className="divBtnProd">
       <ModalGen
         txtBtn={editLogo}
-        Child={<EditProduct product={product} id={producto.id} />}
+        Child={<EditProduct product={productx} id={producto.id} />}
       />
     </div>
   </div>
