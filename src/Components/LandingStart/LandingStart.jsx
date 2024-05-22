@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import AlertDialogSlide from "../BtnNavidad/BtnNavidad";
 import "./LandingStart.css";
 import { useDispatch, useSelector } from "react-redux";
+import morton from "../assets/dog face.png"
 
 const API = process.env.REACT_APP_API_STRAPI;
 export const Inicio = (url) => {
@@ -81,7 +82,7 @@ export const Inicio = (url) => {
           </div>
         </div>
         <Link to="/Comander" className="buttonComander">
-          Ir a Comander
+         <img src={morton} alt="" width="50px" backgroundColo="white"/>
         </Link>
       </div>
     </div>
