@@ -5,6 +5,7 @@ import AlertDialogSlide from "../BtnNavidad/BtnNavidad";
 import "./LandingStart.css";
 import { useDispatch, useSelector } from "react-redux";
 import morton from "../assets/dog face.png"
+import { red } from "@mui/material/colors";
 
 const API = process.env.REACT_APP_API_STRAPI;
 export const Inicio = (url) => {
@@ -41,50 +42,7 @@ export const Inicio = (url) => {
         animateOut ? "animate__animated animate__slideOutUp" : ""
       }`}
     >
-      <div className="landingStart">
-        <div style={{ width: "100%" }}>
-          {" "}
-          <p
-            className="titleSection"
-            style={{
-              justifyContent: "center",
-              outline: "solid white 2px",
-              border: "none",
-              backgroundColor:`${comercio?.attributes?.rgb}`
-            }}
-          >
-            {comercio?.attributes?.msjInicio ||
-              "Consulta por nuestro Menuú del Día"}
-          </p>{" "}
-        </div>
-        <div className="BottomLanding">
-          <img
-            src={`${API}${comercio?.attributes?.logo?.data?.attributes?.url}`}
-            alt=""
-            style={{ maxWidth: "70%", margin: "auto", paddingTop:"2rem" }}
-          />
-          {comercio?.attributes?.presentacion != null ? (
-            <div className="contAlerStart">
-              <AlertDialogSlide />
-            </div>
-          ) : null}
-
-          <div className="btnEnter" onClick={handleButtonClick}>
-            {/* <ButtonEnter titulo="Ver Catalogo" /> */}
-            <button className="Btn" />
-          </div>
-          <div className="btnEnter2">
-          <a
-              className="Btn2"
-              href={comercio?.attributes?.gps}
-              target="_blank"
-            >📍{comercio?.attributes?.direccion} </a>
-          </div>
-        </div>
-        <Link to="/Comander" className="buttonComander">
-         <img src={morton} alt="" width="50px" backgroundColo="white"/>
-        </Link>
-      </div>
+ <h1 style={{color:"red"}}>Cliente dado de baja por falta de pago :(</h1>
     </div>
   );
 };
