@@ -49,7 +49,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundImage:`url(https://www.shutterstock.com/image-photo/man-hand-open-empty-leather-600nw-1924813010.jpg)`, backgroundPosition:"center", backgroundRepeat:"no-repeat"}}>
     <ToastContainer style={{zIndex:99999999}}/>
       <Switch>
         <Route exact path="/Comander" component={AdminPanel} />
